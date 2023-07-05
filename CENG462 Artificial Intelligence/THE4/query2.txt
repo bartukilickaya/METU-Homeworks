@@ -1,0 +1,16 @@
+[BayesNetNodes]
+Cloudy
+Rain
+WetGrass
+Sprinkler
+[Paths]
+(['Cloudy'],'Rain')
+(['Cloudy'],'Sprinkler')
+(['Sprinkler','Rain'],'WetGrass')  
+[ProbabilityTable]
+('Cloudy',[],{0.5,})
+('Rain',['Cloudy'],{True: 0.80, False: 0.20})
+('Sprinkler',['Cloudy'],{True: 0.1, False: 0.5})
+('WetGrass', ['Sprinkler', 'Rain'], {(True, True): 0.99,(True, False): 0.90, (False, True): 0.90, (False, False): 0.00})
+[Query]
+('Cloudy', {'Rain': True})

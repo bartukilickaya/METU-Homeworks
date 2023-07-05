@@ -1,0 +1,8 @@
+[alpha]
+0.1
+[gamma]
+0.9999999999
+[epsilon]
+0.1
+[episode count]
+10000
